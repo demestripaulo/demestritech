@@ -1,0 +1,140 @@
+:root {
+  --ink: #07111f;
+  --gold: #c9a84c;
+  --gold-lt: #e2c47a;
+  --gold-dim: rgba(201, 168, 76, 0.12);
+  --gold-bd: rgba(201, 168, 76, 0.22);
+  --cream: #f0ead8;
+  --slate: rgba(176, 196, 216, 0.75);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background: var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "DM Sans", sans-serif;
+  position: relative;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.5;
+}
+
+.card {
+  width: 90vw;
+  max-width: 440px;
+  background: var(--gold);
+  position: relative;
+  z-index: 10;
+  padding: 24px;
+  color: var(--ink);
+  padding-top: 48px;
+}
+
+.card > * + * {
+  margin-top: 1.5rem;
+}
+
+h1 {
+  font: 700 56px/1 "Playfair Display", serif;
+}
+
+p {
+  font-size: 1.125rem;
+  opacity: 0.85;
+  max-width: 600px;
+}
+
+.btn {
+  background: var(--ink);
+  color: var(--cream);
+  font: inherit;
+  font-size: 1.125rem;
+  border: 0;
+  padding: 0.75rem 1.25rem;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.lang-switch {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: var(--gold-dim);
+  padding: 4px;
+}
+
+.lang-btn {
+  background: transparent;
+  border: 0;
+  color: inherit;
+  font-weight: bold;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.lang-btn.active {
+  background: var(--gold-bd);
+}
+
+.timer {
+  background: var(--cream);
+  height: 1.5px;
+  position: relative;
+}
+
+.timer-bar {
+  position: absolute;
+  inset: 0;
+  background: var(--ink);
+}
+
+.countdown {
+  display: flex;
+  justify-content: space-between;
+  font: italic 300 1.5rem/1 "Cormorant Garamond", serif;
+}
+
+.countdown span:last-child {
+  font-weight: 400;
+}
+
+#particles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.particle {
+  background: var(--slate);
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: particle linear infinite;
+}
+
+@keyframes particle {
+  to {
+    transform: translateY(100vh) translateX(var(--dx));
+    opacity: 0;
+  }
+}
