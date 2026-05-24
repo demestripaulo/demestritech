@@ -508,6 +508,50 @@ h2 em{font-style:normal;color:var(--gold);}
 .why-pt h4{font-family:'Playfair Display',serif;font-size:.9rem;color:var(--cream);margin-bottom:.35rem;}
 .why-pt p{font-size:.84rem;line-height:1.72;opacity:.58;}
 
+/* ══ PORTFOLIO CASES ══ */
+.cases-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:1.3rem;
+}
+.case{
+  text-decoration:none;color:inherit;display:block;
+  background:var(--ink-card);
+  border:1px solid var(--gold-bd);
+  border-radius:2px;overflow:hidden;
+  transition:all .35s;
+}
+.case:hover{transform:translateY(-5px);border-color:rgba(201,168,76,.42);box-shadow:0 22px 52px rgba(0,0,0,.34);}
+.case-thumb{
+  height:190px;
+  background:linear-gradient(135deg,var(--ink-mid),#102945);
+  display:flex;align-items:center;justify-content:center;
+  position:relative;overflow:hidden;
+}
+.case-thumb-icon{
+  font-family:'Playfair Display',serif;
+  font-size:3.5rem;color:rgba(201,168,76,.14);
+}
+.case-thumb-badge{
+  position:absolute;bottom:.9rem;right:.9rem;
+  background:var(--gold-dim);border:1px solid var(--gold-bd);
+  color:var(--gold);font-size:.58rem;
+  letter-spacing:.2em;text-transform:uppercase;
+  padding:.22rem .65rem;border-radius:100px;
+}
+.case-body{padding:1.6rem;}
+.case-body h3{
+  font-family:'Playfair Display',serif;font-size:1.05rem;
+  color:var(--cream);margin-bottom:.5rem;
+}
+.case-body p{font-size:.84rem;opacity:.6;line-height:1.65;}
+.case-tag{
+  display:inline-block;margin-top:1rem;
+  font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--gold);background:var(--gold-dim);
+  border:1px solid var(--gold-bd);
+  padding:.2rem .65rem;border-radius:100px;
+}
+
 /* ══ TESTIMONIALS ══ */
 .testi-grid{
   display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
@@ -710,6 +754,7 @@ footer{
   <ul>
     <li><a href="#services">Services</a></li>
     <li><a href="#payments">Payments</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
     <li><a href="#pricing">Pricing</a></li>
     <li><a href="#contact" class="nav-cta">Get Started</a></li>
   </ul>
@@ -975,7 +1020,7 @@ footer{
         <div class="reveal">
           <span class="s-label">Why DemestriTech</span>
           <h2>Built on <em>truth</em>.<br/>Backed by results.</h2>
-          <p class="s-intro" style="margin-bottom:2.5rem">OrEmet — Light of Truth. That's the foundation of every project we deliver: transparency, integrity, and real outcomes for real businesses.</p>
+          <p class="s-intro" style="margin-bottom:2.5rem">DemestriTech is the practical digital arm of OrEmet LLC — Light of Truth. We turn clarity, order, security, and integrity into websites that help real businesses sell with confidence.</p>
         </div>
         <div class="why-pts">
           <div class="why-pt reveal"><div class="why-pt-ic">⏱️</div><div><h4>Delivered on time, every time</h4><p>48-hour turnaround is a promise, not an estimate. If we miss it, you get a refund on the delivery fee.</p></div></div>
@@ -989,38 +1034,38 @@ footer{
 </section>
 
 <!-- TESTIMONIALS -->
-<section>
+<section id="portfolio">
   <div class="inner">
     <div class="s-header reveal">
-      <span class="s-label">Client Results</span>
-      <h2>What clients <em>say</em></h2>
-      <p class="s-intro">Early adopter testimonials — spots still open at launch pricing.</p>
+      <span class="s-label">Portfolio</span>
+      <h2>Demo websites <em>by niche</em></h2>
+      <p class="s-intro">Explore real website samples built for different business types. Each structure can be adapted for Instagram sellers, local services, physical products, premium offers, and new brands entering the US market.</p>
     </div>
-    <div class="testi-grid">
-      <div class="testi reveal">
-        <div class="testi-stars">★★★★★</div>
-        <div class="testi-text">"Had my Stripe-integrated store live in under 48 hours. First sale came in the same week. Absolutely worth every dollar."</div>
-        <div class="testi-author">
-          <div class="testi-avatar">S</div>
-          <div><div class="testi-name">Sarah M.</div><div class="testi-loc">Small Business Owner · Miami, FL</div></div>
+    <div class="cases-grid">
+      <a class="case reveal" href="https://www.sweetborough.online" target="_blank" rel="noopener noreferrer" aria-label="Open the Sweet Borough website in a new tab">
+        <div class="case-thumb"><span class="case-thumb-icon">◈</span><span class="case-thumb-badge">Live sample</span></div>
+        <div class="case-body">
+          <h3>Sweet Borough</h3>
+          <p>A soft, emotional visual structure for a lifestyle brand, boutique concept, product, or online store.</p>
+          <span class="case-tag">E-commerce / Lifestyle</span>
         </div>
-      </div>
-      <div class="testi reveal">
-        <div class="testi-stars">★★★★★</div>
-        <div class="testi-text">"The Apple Pay integration alone doubled my checkout completion rate. Paulo knows exactly what he's doing."</div>
-        <div class="testi-author">
-          <div class="testi-avatar">J</div>
-          <div><div class="testi-name">James T.</div><div class="testi-loc">E-commerce Seller · Atlanta, GA</div></div>
+      </a>
+      <a class="case reveal" href="https://www.bladesoulbarber.online/" target="_blank" rel="noopener noreferrer" aria-label="Open the Blade Soul Barber website in a new tab">
+        <div class="case-thumb"><span class="case-thumb-icon">◉</span><span class="case-thumb-badge">Live sample</span></div>
+        <div class="case-body">
+          <h3>Blade Soul Barber</h3>
+          <p>A professional local-service website built for trust, local authority, contact conversion, and booking flow.</p>
+          <span class="case-tag">Local Service</span>
         </div>
-      </div>
-      <div class="testi reveal">
-        <div class="testi-stars">★★★★★</div>
-        <div class="testi-text">"Professional, fast, and transparent pricing. No surprises. My site looks better than competitors who paid 10x more."</div>
-        <div class="testi-author">
-          <div class="testi-avatar">R</div>
-          <div><div class="testi-name">Rachel K.</div><div class="testi-loc">Digital Creator · Austin, TX</div></div>
+      </a>
+      <a class="case reveal" href="https://www.apexathleticla.online/" target="_blank" rel="noopener noreferrer" aria-label="Open the Apex Athletic LA website in a new tab">
+        <div class="case-thumb"><span class="case-thumb-icon">◎</span><span class="case-thumb-badge">Live sample</span></div>
+        <div class="case-body">
+          <h3>Apex Athletic LA</h3>
+          <p>A bold and modern structure for a fitness brand, personal trainer, gym, coaching offer, or performance product.</p>
+          <span class="case-tag">Fitness / Performance</span>
         </div>
-      </div>
+      </a>
     </div>
   </div>
 </section>
@@ -1147,20 +1192,6 @@ footer{
   </div>
 </footer>
 
-<script>
-const nav=document.getElementById('nav');
-window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>50));
-const els=document.querySelectorAll('.reveal');
-const io=new IntersectionObserver(entries=>{
-  let d=0;
-  entries.forEach(e=>{
-    if(e.isIntersecting){
-      setTimeout(()=>e.target.classList.add('in'),d);
-      d+=85;io.unobserve(e.target);
-    }
-  });
-},{threshold:.08});
-els.forEach(e=>io.observe(e));
-</script>
+  <script src="./demestritech.js" defer></script>
 </body>
 </html>

@@ -87,29 +87,6 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
   </div>
   <div class="card-foot">demestritech.com · Florida, USA</div>
 </div>
-<script>
-const lang=(navigator.language||navigator.userLanguage||'en').toLowerCase();
-const isBR=lang.startsWith('pt');
-const targetHref=isBR?'./br-index.html':'./us-index.html';
-const targetBtn=isBR?'btn-br':'btn-us';
-document.getElementById(targetBtn).classList.add('auto-target');
-const TOTAL=5000,INTERVAL=50;
-let elapsed=0;
-const bar=document.getElementById('cdBar');
-const cdNum=document.getElementById('cdNum');
-const timer=setInterval(()=>{
-  elapsed+=INTERVAL;
-  bar.style.width=Math.max(0,100-(elapsed/TOTAL*100))+'%';
-  cdNum.textContent=Math.ceil((TOTAL-elapsed)/1000);
-  if(elapsed>=TOTAL){clearInterval(timer);window.location.href=targetHref;}
-},INTERVAL);
-document.querySelectorAll('.lang-btn').forEach(b=>b.addEventListener('click',()=>clearInterval(timer)));
-const pc=document.getElementById('particles');
-for(let i=0;i<22;i++){
-  const p=document.createElement('div');p.className='particle';
-  p.style.cssText=`left:${Math.random()*100}%;bottom:${Math.random()*-10}%;--dx:${(Math.random()-.5)*80}px;animation-duration:${8+Math.random()*14}s;animation-delay:${Math.random()*10}s;width:${1+Math.random()*2}px;height:${1+Math.random()*2}px;`;
-  pc.appendChild(p);
-}
-</script>
+  <script src="./demestritech.js" defer></script>
 </body>
 </html>
